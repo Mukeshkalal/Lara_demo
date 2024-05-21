@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\Cast\String_;
+use PhpParser\Node\Stmt\Return_;
 
 class ProjectController extends Controller
 {
@@ -12,7 +14,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        $data = Project::all();
+        return view('project.index', compact('data'));
     }
 
     /**
@@ -28,7 +31,16 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'contact' => $request->contact,
+            'password' => $request->password,
+            'c_password' => $request->c_password,
+        ];
+
+        Project::create($data);
+        return redirect('project');
     }
 
     /**
@@ -42,24 +54,40 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Project $project)
+    public function edit(String $id)
     {
-        //
+
+        $data = Project::find($id);
+        return view('project.edit', compact('data'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Project $project)
+    public function update(Request $request, String $id)
     {
-        //
+        $update = Project::find($id);
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'contact' => $request->contact,
+            'password' => $request->password,
+            'c_password' => $request->c_password,
+        ];
+
+        $update->update($data);
+        return redirect('project');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Project $project)
+    public function destroy(String $id)
     {
-        //
+
+
+        Project::destroy($id);
+
+        return redirect('project');
     }
 }
