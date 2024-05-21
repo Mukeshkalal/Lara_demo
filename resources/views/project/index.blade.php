@@ -19,6 +19,8 @@
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Contact</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">c_Password</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -28,7 +30,9 @@
                         <th> {{ $dt->id }}</th>
                         <td> {{ $dt->name }}</td>
                         <td> {{ $dt->email }}</td>
-                        <td> {{ $dt->contact }}</td>
+                        <td> {{ $dt->numbar }}</td>
+                        <td> {{ $dt->password }}</td>
+                        <td> {{ $dt->c_password }}</td>
                         <td>
                             <a href="{{ url('project/' . $dt->id . '/edit') }}" class="btn btn-info">Edit</a>
                             <form action="{{ url('project/' . $dt->id) }}" method="post" class="my-2">
