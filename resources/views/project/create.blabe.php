@@ -10,7 +10,15 @@
 
 <body>
     <div class="container my-2">
+<<<<<<< Updated upstream:resources/views/project/create.blabe.php
         <form action="{{route('project.store')}}" method="post">
+=======
+        <h2 class="text-center border-bottom pb-2 border-5 border-info">Project Create</h2>
+        {{-- @foreach ($error->all() as $err)
+            {{ $err }}
+        @endforeach --}}
+        <form action="{{ route('project.store') }}" method="post">
+>>>>>>> Stashed changes:resources/views/project/create.blade.php
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
