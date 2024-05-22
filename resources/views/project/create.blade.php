@@ -11,17 +11,8 @@
 
 <body>
     <div class="container my-2">
-<<<<<<< HEAD
-        <h2 class="text-center border-bottom pb-2 border-5 border-info">Project Create</h2>
-        @foreach ($error->all() as $err)
-            {{ $err }}
-        @endforeach
-        <form action="{{ route('project.store') }}" method="post">
-=======
         <form action="{{ route('project.store') }}" method="post">
             <h2 class="text-center border-bottom pb-2 border-5 border-info">Project Create</h2>
-
->>>>>>> main
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
@@ -55,6 +46,3 @@
 </body>
 
 </html>
-
-
-{{-- hello mukesh --}}
