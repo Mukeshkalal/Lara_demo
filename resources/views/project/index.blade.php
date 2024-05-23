@@ -18,11 +18,8 @@
                     <th scope="col">Sr No.</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
-<<<<<<< HEAD
                     <th scope="col">Contact</th>
-=======
                     <th scope="col">contact</th>
->>>>>>> main
                     <th scope="col">Password</th>
                     <th scope="col">c_Password</th>
                     <th scope="col">Action</th>
@@ -34,11 +31,8 @@
                         <th> {{ $dt->id }}</th>
                         <td> {{ $dt->name }}</td>
                         <td> {{ $dt->email }}</td>
-<<<<<<< HEAD
                         <td> {{ $dt->numbar }}</td>
-=======
                         <td> {{ $dt->contact }}</td>
->>>>>>> main
                         <td> {{ $dt->password }}</td>
                         <td> {{ $dt->c_password }}</td>
                         <td>
