@@ -22,11 +22,11 @@ class ProjectRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required | Min:3',
-            'email' => 'required | Email',
-            'number' => 'required | Numeric',
-            'password' => 'required | Password',
-            'c_password' => 'required | Same:password',
+            'name' => 'required|min:3|max:30|string',
+            'email' => 'required|email',
+            'contact' => 'required|min:10|string',
+            'password' => 'required|min:8',
+            'c_password' => 'required|same:password',
         ];
     }
 }

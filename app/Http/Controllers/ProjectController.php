@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProjectRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\Cast\String_;
@@ -29,16 +30,10 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ProjectRequest $request)
 
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'contact' => 'required',
-            'password' => 'required',
-            'c_password' => 'required',
-        ]);
+        $request->validated();
         $data = [
             'name' => $request->name,
             'email' => $request->email,

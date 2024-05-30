@@ -11,6 +11,7 @@
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Contact</th>
+                    <th scope="col">contact</th>
                     <th scope="col">Password</th>
                     <th scope="col">c_Password</th>
                     <th scope="col">Action</th>
@@ -23,6 +24,7 @@
                         <td> {{ $dt->name }}</td>
                         <td> {{ $dt->email }}</td>
                         <td> {{ $dt->numbar }}</td>
+                        <td> {{ $dt->contact }}</td>
                         <td> {{ $dt->password }}</td>
                         <td> {{ $dt->c_password }}</td>
                         <td>
