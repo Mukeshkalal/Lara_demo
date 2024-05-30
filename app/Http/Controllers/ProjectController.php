@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProjectRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
-use PhpParser\Node\Expr\Cast\String_;
-use PhpParser\Node\Stmt\Return_;
 
 class ProjectController extends Controller
 {
@@ -87,10 +85,7 @@ class ProjectController extends Controller
      */
     public function destroy(String $id)
     {
-
-
         Project::destroy($id);
-
         return redirect('project');
     }
 }
