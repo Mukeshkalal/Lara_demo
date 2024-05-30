@@ -1,16 +1,12 @@
-<!doctype html>
-<html lang="en">
+@extends('layouts.app')
+@section('title', 'Project Create Page ')
+@section('content')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Create</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-
-<body>
     <div class="container my-2">
+<<<<<<< HEAD
+        <h2 class="text-center border-bottom pb-2 border-5 border-info">Project Create</h2>
+=======
+>>>>>>> c5fd5b2961a688ce030e0aefdcb2b95d2641e686
         <form action="{{ route('project.store') }}" method="post">
             <h2 class="text-center border-bottom pb-2 border-5 border-info">Project Create</h2>
             @csrf
@@ -24,11 +20,15 @@
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
+<<<<<<< HEAD
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" />
+=======
                 <input type="email" class="form-control" id="email" name="email"
                     placeholder="name@example.com" />
                 @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                 @endif
+>>>>>>> c5fd5b2961a688ce030e0aefdcb2b95d2641e686
             </div>
             <div class="mb-3">
                 <label for="contact" class="form-label">number</label>
@@ -56,9 +56,13 @@
             </div>
         </form>
     </div>
+<<<<<<< HEAD
+@endsection
+=======
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
 </body>
 
 </html>
+>>>>>>> c5fd5b2961a688ce030e0aefdcb2b95d2641e686
