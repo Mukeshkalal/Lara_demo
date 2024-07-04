@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CrudController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,3 +13,4 @@ Route::post('update/{id}', [CrudController::class, 'update'])->name('crud.update
 Route::any('delete/{id}', [CrudController::class, 'destroy'])->name('crud.delete');
 
 Route::resource('project', ProjectController::class);
+Route::resource('product', ProductController::class);
